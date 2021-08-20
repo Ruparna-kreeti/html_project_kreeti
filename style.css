@@ -1,0 +1,125 @@
+:root {
+  --red: #ff6666;
+  --light-gray: #f2f2f2;
+  --deep-gray: #737373;
+  --petal: #4d9900;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* overriding bootstrap css */
+.nav-link {
+  color: black;
+  font-weight: bold;
+  margin: auto 20px;
+}
+.nav-link:hover {
+  color: var(--deep-gray);
+}
+.d-flex {
+  gap: 10px;
+}
+
+/*banner css */
+.petals {
+  padding-top: 65px;
+  max-width: 100vw;
+  overflow: hidden;
+}
+.side-container {
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.main-banner img {
+  align-self: stretch;
+  width: 100%;
+}
+
+/*feature css */
+.feature {
+  width: 100%;
+  background-color: var(--red);
+  color: white;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*flower card css */
+.flowers-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.flowers-row {
+  display: flex;
+  gap: 10px;
+}
+.flower-card {
+  background-color: var(--light-gray);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.flower-card img {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.flower-card h3 {
+  font-weight: bold;
+}
+
+/*footer css */
+.footer {
+  margin: 0;
+  background-color: black;
+}
+.footer-content h3 {
+  margin-top: 30px;
+  color: var(--red);
+}
+.footer-content .span-content {
+  color: white;
+  font-size: 0.8em;
+}
+.petal-color {
+  color: var(--petal);
+}
+/*mobile view */
+@media only screen and (max-width: 576px) {
+  /*bootstrap css overriding*/
+  .navbar-collapse {
+    background-color: var(--light-gray);
+  }
+  .nav-item:hover,
+  .nav-link:hover {
+    background-color: var(--red);
+    color: white;
+  }
+  /*side banner css */
+  .side-container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .side-container img {
+    max-width: 48%;
+  }
+  /*flower card css*/
+  .flowers-section {
+    align-items: center;
+  }
+  .flowers-row {
+    flex-direction: column;
+  }
+}
